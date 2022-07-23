@@ -31,8 +31,9 @@ h1 {
   max-width: 600px;
   background: rgba(193, 228, 228, 0.2);
   border-radius: 10px;
-  text-transform: capitalize;
+  
 }
+
 .container header,
 .container footer {
   display: flex;
@@ -62,7 +63,9 @@ h1 {
 }
 .container main .top .degrees a {
   color: rgb(226, 231, 231);
-  text-decoration: none;
+  text-decoration: none;}
+.info-main:first-letter{
+  text-transform: capitalize;
 }
 .container main .top .degrees a:hover {
   color: white;
