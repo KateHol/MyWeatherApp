@@ -1,0 +1,78 @@
+h1 {
+  color: rgb(31, 26, 27);
+}
+.img {
+  display: block;
+  position: relative;
+  color: red;
+  top: 400px;
+  left: 100px;
+  
+}
+.degrees{
+  position: relative;
+  font-size: 16px;
+  top: -12px;
+}
+.col-4 {
+  color: orange;
+  text-align: center;
+  font-size: larger;
+}
+.high {
+  border: 4px solid rgb(122, 108, 108);
+  padding: 10px;
+  margin: 50%;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 60px auto;
+  max-width: 600px;
+  background: rgba(193, 228, 228, 0.2);
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+.container header,
+.container footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 10px;
+}
+.container header .my-button,
+.container footer .my-button {
+  border: 1px solid white;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.container header .my-button:hover,
+.container footer .my-button:hover {
+  border: 1px solid green;
+  color: green;
+}
+.container main {
+  margin: 100px 40px;
+}
+.container main .top {
+  text-align: center;
+}
+.container main .top .degrees a {
+  color: rgb(226, 231, 231);
+  text-decoration: none;
+}
+.container main .top .degrees a:hover {
+  color: white;
+}
+.container main .weather-info {
+  display: flex;
+  direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.container footer {
+  justify-content: center;
+}
