@@ -75,7 +75,7 @@ function currentPositionWeather() {
 
   navigator.geolocation.getCurrentPosition(getPosition);
 }
-let form = document.querySelector("#form");
+
 let currentCity = document.querySelector("#hometown");
 let temp = document.querySelector("#dayTemp");
 let sky = document.querySelector("#sky");
@@ -100,17 +100,18 @@ function displayWeather(response) {
   `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
-function search(event) {
+function search(city) {
   let apiKey = "d773f6cbefee55a5ba39025c971004bf";
-  let city = document.querySelector("#inCity").value;
   let Apiurl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(Apiurl).then(displayWeather);
 }
+let city = document.querySelector("#inCity").value;
 
 function pressSubmit(event) {
   event.preventDefault();
-  let cityInput = document.querySelector("#form");
+  let cityInput = document.querySelector("#inCity");
   search(cityInput.value);
 }
-
+search("Kyiv");
+let form = document.querySelector("#form");
 form.addEventListener("submit", pressSubmit);
