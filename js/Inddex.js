@@ -81,7 +81,7 @@ let temp = document.querySelector("#dayTemp");
 let sky = document.querySelector("#sky");
 let rain = document.querySelector("#rain");
 let wind = document.querySelector("#wind");
-//let icon = document.querySelector("#weather-icon");
+let icon = document.querySelector("#weather-icon");
 
 function displayWeather(response) {
   document.querySelector("#hometown").innerHTML = response.data.name;
@@ -95,9 +95,9 @@ function displayWeather(response) {
   );
   document.querySelector("#sky").innerHTML =
     response.data.weather[0].description;
-  //icon.setAttribute(
-  // "src",
-  // `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  icon.setAttribute(
+  "src",
+  `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
 function search(event) {
