@@ -123,6 +123,11 @@ let tempElement = document.querySelector("#dayTemp");
 let fahrenheitTemperature = (celsiusTemperature* 9/5)+ 32;
 tempElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+function displayCelsius(event){
+event.preventDefault();
+let tempElement = document.querySelector("#dayTemp");
+tempElement.innerHTML = Math.round(celsiusTemperature);
+}
 
 let celsiusTemperature = null;
 
@@ -132,5 +137,8 @@ form.addEventListener("submit", pressSubmit);
 
 let fahrenheitLink = document.querySelector("#fahrenheit");
 fahrenheitLink.addEventListener("click",displayFahrenheit);
+
+let celsiusLink = document.querySelector("#celsius");
+celsiusLink.addEventListener("click",displayCelsius);
 
 search("Kyiv");
