@@ -117,12 +117,20 @@ function pressSubmit(event) {
   let cityInput = document.querySelector("#inCity");
   search(cityInput.value);
 }
+
+
 function displayFahrenheit(event){
 event.preventDefault();
 let tempElement = document.querySelector("#dayTemp");
+
+celsiusLink.classList.remove("active");
+fahrenheitLink.classList.add("active");
 let fahrenheitTemperature = (celsiusTemperature* 9/5)+ 32;
 tempElement.innerHTML = Math.round(fahrenheitTemperature);
 }
+
+
+
 function displayCelsius(event){
 event.preventDefault();
 let tempElement = document.querySelector("#dayTemp");

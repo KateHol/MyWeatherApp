@@ -15,11 +15,10 @@ h1 {
   display: flex;
   flex-direction: column;
   margin: 60px auto;
-  max-width: 600px;
+  max-width: 500px;
   background:radial-gradient(circle at -2.2% -3.8%, rgba(255, 227, 2, 0.41) 0%, rgb(59, 188, 241) 100.2%);
   border-radius: 10px;
-  
-}
+  }
 
 .container header,
 .container footer {
@@ -29,34 +28,26 @@ h1 {
   justify-content: space-between;
   margin: 10px 10px;
 }
-.container header .my-button,
-.container footer .my-button {
-  border: 1px solid white;
-  color: white;
+.container header .my-button{
+  border: 3px solid white;
+  color: rgb(74, 63, 221);
   padding: 6px 12px;
   border-radius: 5px;
   text-decoration: none;
 }
-.container header .my-button:hover,
-.container footer .my-button:hover {
+.container header .my-button:hover{
   border: 1px solid green;
   color: green;
 }
-.container main {
-  margin: 100px 40px;
-}
+
 .container main .top {
   text-align: center;
 }
-.container main .top .degrees a {
-  color: rgb(226, 231, 231);
-  text-decoration: none;}
+
 .info-main:first-letter{
   text-transform: capitalize;
 }
-.container main .top .degrees a:hover {
-  color: white;
-}
+
 .container main .weather-info {
   display: flex;
   direction: row;
@@ -65,4 +56,11 @@ h1 {
 }
 .container footer {
   justify-content: center;
+}
+h2 .active{
+  color:rgb(20, 7, 7);
+  cursor: default;
+}
+h2 .active:hover{
+  text-decoration: none;
 }
