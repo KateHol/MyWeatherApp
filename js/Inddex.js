@@ -82,7 +82,6 @@ let monthes = [
 let month = document.querySelector("#month");
 month.innerHTML = monthes[now.getMonth()];
 
-// current position weather
 
 let currentB = document.querySelector("#currentB");
 currentB.addEventListener("click", currentPositionWeather);
@@ -113,7 +112,7 @@ let wind = document.querySelector("#wind");
 let icon = document.querySelector("#weather-icon");
 
 function getForecast(coordinates){
-  console.log(coordinates);
+ 
   let apiKey = "d773f6cbefee55a5ba39025c971004bf";
   let Apiurl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
     axios.get(Apiurl).then(displayForecast);
